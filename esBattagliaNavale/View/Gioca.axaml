@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="esBattagliaNavale.View.Gioca">
+
+
+    <StackPanel Orientation="Horizontal" Spacing="30" HorizontalAlignment="Center">
+
+        <StackPanel Spacing="10">
+            <TextBlock Text="Clicca una cella per sparare." HorizontalAlignment="Center" />
+
+            <Grid Name="GrdCampo" Width="400" Height="400" Background="LightGray"
+                  RowDefinitions="*,*,*,*,*,*,*,*,*,*"
+                  ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" />
+
+            <TextBlock Name="TxtMosse" FontWeight="Bold" FontSize="16" />
+            <TextBlock Name="TxtNavi" FontWeight="Bold" FontSize="16" />
+            <TextBlock Name="TxtErrore" Foreground="Red" />
+        </StackPanel>
+
+        <StackPanel Spacing="10" Width="300">
+            <TextBlock Text="Log" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
+            <ListBox Name="LstLog" Height="400" Background="White" />
+        </StackPanel>
+
+    </StackPanel>
+
+</UserControl>

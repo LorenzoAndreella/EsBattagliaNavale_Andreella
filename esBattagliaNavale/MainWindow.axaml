@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="1200"
+        x:Class="esBattagliaNavale.MainWindow"
+        MinHeight="700" MinWidth="700"
+        WindowStartupLocation="CenterScreen"
+        Title="esBattagliaNavale"
+        RequestedThemeVariant="Light"
+        Background="GhostWhite">
+
+        <Grid ColumnDefinitions="*,320" RowDefinitions="Auto,Auto,*">
+
+                <TextBlock Name="TxtTitolo" Grid.Row="0" Grid.Column="0" Text="Battaglia Navale"
+                           FontWeight="Bold" FontSize="24" Margin="20"/>
+
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Spacing="10" Margin="20,0,20,10">
+                        <Button Name="BtnInserimento" Content="INSERIMENTO" Click="ShowInserimentoView"/>
+                        <Button Name="BtnGioca" Content="GIOCA" Click="ShowGiocaView"/>
+                </StackPanel>
+
+                <TextBlock Name="TxtErrore" Grid.Row="1" Grid.Column="0" Foreground="Red" HorizontalAlignment="Center" Margin="20,0"/>
+
+                <ContentControl Name="CntView" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="20,10" />
+
+                
+        </Grid>
+</Window>

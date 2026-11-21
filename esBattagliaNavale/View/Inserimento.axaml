@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="esBattagliaNavale.View.Inserimento">
+
+    <StackPanel Spacing="10" HorizontalAlignment="Center">
+        <TextBlock Text="Posizionamento della flotta" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" />
+        <TextBlock Name="TxtProssima" HorizontalAlignment="Center" />
+
+        <Grid Name="GrdCampo" Width="400" Height="400" HorizontalAlignment="Center" Background="LightGray"
+              RowDefinitions="*,*,*,*,*,*,*,*,*,*"
+              ColumnDefinitions="*,*,*,*,*,*,*,*,*,*" />
+
+        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+            <Button Name="BtnOrienta" Content="Orizzontale" Width="120" Click="CambiaOrientamento"/>
+            <Button Name="BtnReset" Content="Ricomincia" Width="120" Click="Ricomincia"/>
+        </StackPanel>
+        <TextBlock Text="Clicca la cella da cui parte la nave. Le navi non possono toccarsi." HorizontalAlignment="Center"/>
+        <TextBlock Name="TxtErrore" Foreground="Red" HorizontalAlignment="Center" />
+    </StackPanel>
+
+    
+</UserControl>
